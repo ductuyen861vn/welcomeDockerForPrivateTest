@@ -5,6 +5,18 @@ version: 2.1
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/configuration-reference/#jobs
 jobs:
+  say-hello-docker:
+    # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
+    # See: https://circleci.com/docs/configuration-reference/#executor-job
+    docker:
+      - image: cimg/base:stable
+    # Add steps to the job
+    # See: https://circleci.com/docs/configuration-reference/#steps
+    steps:
+      - checkout
+      - run:
+          name: "Say hello"
+          command: "echo Hello Docker!"
   build-docker:
     working_directory: /Users/tuyenpham/Desktop/Projects/TADP/Ductuyen861vn/WelcomeDockerForPrivateTest
     resource_class: arm.medium
@@ -22,18 +34,7 @@ jobs:
             docker login --username ductuyen861vn --password Unlockok123
             docker build -t ductuyen861vn/welcomedockerforprivatetest .
             docker push ductuyen861vn/welcomedockerforprivatetest:latest
-  say-hello-docker:
-    # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
-    # See: https://circleci.com/docs/configuration-reference/#executor-job
-    docker:
-      - image: cimg/base:stable
-    # Add steps to the job
-    # See: https://circleci.com/docs/configuration-reference/#steps
-    steps:
-      - checkout
-      - run:
-          name: "Say hello"
-          command: "echo Hello Docker!"
+            docker run -p 3000:3000 ductuyen861vn/welcomedockerforprivatetest:latest
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
