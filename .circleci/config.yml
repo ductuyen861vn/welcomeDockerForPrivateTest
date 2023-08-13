@@ -51,7 +51,9 @@ jobs:
           command: |
             docker login --username ductuyen861vn --password Unlockok123
             docker pull ductuyen861vn/welcomedockerforprivatetest:latest
-            docker run -p 8080:3000 ductuyen861vn/welcomedockerforprivatetest:latest 
+            docker run -d --name welcomedockerforprivatetest -p 8080:3000 ductuyen861vn/welcomedockerforprivatetest:latest
+            docker container ls
+            curl welcomedockerforprivatetest:8080
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
