@@ -20,7 +20,7 @@ jobs:
           name: Push docker image to dockerHUB
           command: |
             docker login --username ductuyen861vn --password Unlockok123
-            docker tag welcomedockerforprivatetest ductuyen861vn/welcomedockerforprivatetest
+            docker tag ductuyen861vn/welcomedockerforprivatetest
             docker build -t welcomedockerforprivatetest .
             docker push ductuyen861vn/welcomedockerforprivatetest:latest
   say-hello-docker:
