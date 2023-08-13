@@ -6,15 +6,15 @@ version: 2.1
 # See: https://circleci.com/docs/configuration-reference/#jobs
 jobs:
   build-docker:
-    macos:
-      - xcode: 13.4.1
     working_directory: /Users/tuyenpham/Desktop/Projects/TADP/Ductuyen861vn/WelcomeDockerForPrivateTest
     resource_class: arm.medium
-    docker:
-      - image: ductuyen861vn/welcomedockerforprivatetest:latest
-        auth:
-          username: ductuyen861vn
-          password: Unlockok123
+    macos:
+      xcode: 14.2.0
+#    docker:
+#      - image: ductuyen861vn/welcomedockerforprivatetest:latest
+#        auth:
+#          username: ductuyen861vn
+#          password: Unlockok123
     steps:
       - checkout
       - run:
