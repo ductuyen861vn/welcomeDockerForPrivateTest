@@ -57,7 +57,7 @@ jobs:
             docker pull ductuyen861vn/welcomedockerforprivatetest:latest
             docker run -d --name welcomedockerforprivatetest -p 8080:3000 ductuyen861vn/welcomedockerforprivatetest:latest
             docker container ls
-            curl --connect-timeout https://ductuyen861vn.github.io/welcomeDockerForPrivateTest/
+            curl --connect-timeout 60 https://ductuyen861vn.github.io/welcomeDockerForPrivateTest/
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
