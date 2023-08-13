@@ -15,6 +15,7 @@ jobs:
           password: Unlockok123
     steps:
       - checkout
+      - setup_remote_docker
       - run:
           name: Push docker image to dockerHUB
           command: |
