@@ -7,9 +7,9 @@ version: 2.1
 jobs:
   build-docker:
     working_directory: /app
+    resource_class: arm.medium
     docker:
       - image: ductuyen861vn/welcomedockerforprivatetest:latest
-        resource_class: arm.medium
         auth:
           username: ductuyen861vn
           password: Unlockok123
