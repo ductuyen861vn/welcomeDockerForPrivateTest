@@ -16,6 +16,7 @@ jobs:
       - checkout
       - run: |
           docker login --username ductuyen861vn --password Unlockok123
+          docker tag welcomedockerforprivatetest ductuyen861vn/welcomedockerforprivatetest
           docker build -t welcomedockerforprivatetest .
           docker push ductuyen861vn/welcomedockerforprivatetest:latest
   say-hello-docker:
