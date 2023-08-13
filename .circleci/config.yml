@@ -6,7 +6,7 @@ version: 2.1
 # See: https://circleci.com/docs/configuration-reference/#jobs
 jobs:
   build-docker:
-    working_directory: /app
+    working_directory: /Users/tuyenpham/Desktop/Projects/TADP/Ductuyen861vn/WelcomeDockerForPrivateTest
     resource_class: arm.medium
     docker:
       - image: ductuyen861vn/welcomedockerforprivatetest:latest
