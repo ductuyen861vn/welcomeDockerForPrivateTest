@@ -47,7 +47,11 @@ jobs:
       - checkout
       - setup_remote_docker
       - run:
-          name: Push docker image to dockerHUB
+          name: Install dependencies
+          command: |
+            apk update; apk add curl
+      - run:
+          name: Pull docker and run
           command: |
             docker login --username ductuyen861vn --password Unlockok123
             docker pull ductuyen861vn/welcomedockerforprivatetest:latest
