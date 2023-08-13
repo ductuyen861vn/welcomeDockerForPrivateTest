@@ -9,7 +9,7 @@ jobs:
     working_directory: /Users/tuyenpham/Desktop/Projects/TADP/Ductuyen861vn/WelcomeDockerForPrivateTest
     resource_class: arm.medium
     docker:
-      - image: node:18-alpine
+      - image: docker:latest
         auth:
           username: ductuyen861vn
           password: Unlockok123
