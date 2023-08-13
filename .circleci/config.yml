@@ -27,16 +27,36 @@ jobs:
           password: Unlockok123
     steps:
       - checkout
+      - setup_remote_docker
       - run:
           name: Push docker image to dockerHUB
           command: |
             docker login --username ductuyen861vn --password Unlockok123
+            docker build -t ductuyen861vn/welcomedockerforprivatetest .
+            docker push ductuyen861vn/welcomedockerforprivatetest:latest
             docker run -p 8080:3000 ductuyen861vn/welcomedockerforprivatetest:latest
+  run-container:
+    working_directory: /Users/tuyenpham/Desktop/Projects/TADP/Ductuyen861vn/WelcomeDockerForPrivateTest
+    resource_class: arm.medium
+    docker:
+      - image: docker:24.0.5-git
+        auth:
+          username: ductuyen861vn
+          password: Unlockok123
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Push docker image to dockerHUB
+          command: |
+            docker login --username ductuyen861vn --password Unlockok123
+            docker pull ductuyen861vn/welcomedockerforprivatetest:latest
+            docker run -p 8080:3000 ductuyen861vn/welcomedockerforprivatetest:latest 
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
 workflows:
   say-hello-docker-workflow:
     jobs:
-      - build-docker
+      - run-container
       - say-hello-docker
