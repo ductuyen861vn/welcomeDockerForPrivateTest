@@ -9,7 +9,7 @@ jobs:
     working_directory: /Users/tuyenpham/Desktop/Projects/TADP/Ductuyen861vn/WelcomeDockerForPrivateTest
     resource_class: arm.medium
     docker:
-      - image: docker:latest
+      - image: docker:24.0.5-git
         auth:
           username: ductuyen861vn
           password: Unlockok123
