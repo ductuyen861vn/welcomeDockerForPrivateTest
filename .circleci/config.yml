@@ -9,10 +9,13 @@ jobs:
     working_directory: /app
     docker:
       - image: ductuyen861vn/welcomedockerforprivatetest:latest
+        auth:
+          username: ductuyen861vn
+          password: Unlockok123
     steps:
       - checkout
       - run: |
-          docker login --username ductuyen861vnEdit --password Unlockok123
+          docker login --username ductuyen861vn --password Unlockok123
           docker build -t welcomedockerforprivatetest .
           docker push ductuyen861vn/welcomedockerforprivatetest:latest
   say-hello-docker:
