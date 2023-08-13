@@ -9,12 +9,13 @@ jobs:
     working_directory: /app
     docker:
       - image: ductuyen861vn/welcomedockerforprivatetest:latest
+        resource_class: arm.medium
         auth:
           username: ductuyen861vn
           password: Unlockok123
     steps:
       - checkout
-      - deploy:
+      - run:
           name: Push docker image to dockerHUB
           command: |
             docker login --username ductuyen861vn --password Unlockok123
