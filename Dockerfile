@@ -2,7 +2,7 @@
 FROM node:18-alpine
 
 # The /app directory should act as the main application directory
-WORKDIR /Users/tuyenpham/Desktop/Projects/TADP/Ductuyen861vn/WelcomeDockerForPrivateTest
+WORKDIR /app
 
 # Copy the app package and package-lock.json file
 COPY package*.json ./
