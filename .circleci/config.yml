@@ -8,7 +8,7 @@ jobs:
   build-docker:
     working_directory: /app
     docker:
-      image: ductuyen861vn/welcomedockerforprivatetest:latest
+      - image: ductuyen861vn/welcomedockerforprivatetest:latest
     steps:
       - checkout
       - run: |
