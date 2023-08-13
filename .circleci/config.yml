@@ -8,13 +8,11 @@ jobs:
   build-docker:
     working_directory: /Users/tuyenpham/Desktop/Projects/TADP/Ductuyen861vn/WelcomeDockerForPrivateTest
     resource_class: arm.medium
-    macos:
-      xcode: 14.2.0
-#    docker:
-#      - image: ductuyen861vn/welcomedockerforprivatetest:latest
-#        auth:
-#          username: ductuyen861vn
-#          password: Unlockok123
+    docker:
+      - image: node:18-alpine
+        auth:
+          username: ductuyen861vn
+          password: Unlockok123
     steps:
       - checkout
       - run:
