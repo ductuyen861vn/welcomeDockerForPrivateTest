@@ -14,11 +14,13 @@ jobs:
           password: Unlockok123
     steps:
       - checkout
-      - run: |
-          docker login --username ductuyen861vn --password Unlockok123
-          docker tag welcomedockerforprivatetest ductuyen861vn/welcomedockerforprivatetest
-          docker build -t welcomedockerforprivatetest .
-          docker push ductuyen861vn/welcomedockerforprivatetest:latest
+      - deploy:
+          name: Push docker image to dockerHUB
+          command: |
+            docker login --username ductuyen861vn --password Unlockok123
+            docker tag welcomedockerforprivatetest ductuyen861vn/welcomedockerforprivatetest
+            docker build -t welcomedockerforprivatetest .
+            docker push ductuyen861vn/welcomedockerforprivatetest:latest
   say-hello-docker:
     # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/configuration-reference/#executor-job
