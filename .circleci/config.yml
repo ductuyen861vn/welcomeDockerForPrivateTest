@@ -55,7 +55,7 @@ jobs:
           command: |
             docker login --username ductuyen861vn --password Unlockok123
             docker pull ductuyen861vn/welcomedockerforprivatetest:latest
-            docker run -d --name welcomedockerforprivatetest -p 8080:3000 ductuyen861vn/welcomedockerforprivatetest:latest
+            docker run -d --name welcomedockerforprivatetest -p 8081:3000 ductuyen861vn/welcomedockerforprivatetest:latest
             docker container ls
             curl --connect-timeout 60 https://ductuyen861vn.github.io/welcomeDockerForPrivateTest/
 
