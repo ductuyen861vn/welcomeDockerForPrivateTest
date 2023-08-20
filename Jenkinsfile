@@ -8,20 +8,6 @@ pipeline {
                 checkout scmGit(branches: [[name: 'feature/TuyenPham']], extensions: [], userRemoteConfigs: [[credentialsId: 'githubTuyenPham', url: 'https://github.com/ductuyen861vn/welcomeDockerForPrivateTest.git']])
             }
         }
-        // stage('Build Docker Image') {
-        //     steps {
-        //         sh 'docker build -t ductuyen861vn/welcomedk . --build-arg HTTP_TIMEOUT=600 --build-arg npm_config_registry=https://registry.yarnpkg.com'
-        //     }
-        // }
-        // stage('Push Docker Image to DockerHub') {
-        //     steps {
-        //         withCredentials([string(credentialsId: 'dockerHubPWTuyenPham', variable: 'dockerHubPWTuyenPham')]) {
-        //             sh 'docker login --username ductuyen861vn --password ${dockerHubPWTuyenPham}'
-        //             sh 'docker push ductuyen861vn/welcomedk'
-        //         }
-
-        //     }
-        // }
         stage('Pull docker image') {
             steps {
                 sh 'docker pull ductuyen861vn/welcomedk'
