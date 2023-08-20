@@ -59,7 +59,7 @@ jobs:
             docker container ls
             curl --connect-timeout 60 https://ductuyen861vn.github.io/welcomeDockerForPrivateTest/
 
-# Orchestrate jobs using workflows
+# Orchestrate jobs using workflows test
 # See: https://circleci.com/docs/configuration-reference/#workflows
 workflows:
   say-hello-docker-workflow:
