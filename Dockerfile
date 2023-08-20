@@ -14,6 +14,8 @@ COPY ./public ./public
 # Install node packages, install serve, build the app, and remove dependencies at the end
 RUN npm config set fetch-retry-mintimeout 20000 \
     && npm config set fetch-retry-maxtimeout 120000 \
+    && npm config rm proxy \
+    && npm config rm https-proxy \
     && npm install \
     && npm install -g serve \
     && npm run build \
