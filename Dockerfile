@@ -12,7 +12,7 @@ COPY ./src ./src
 COPY ./public ./public
 
 # Install node packages, install serve, build the app, and remove dependencies at the end
-RUN npm config set registry http://registry.npmjs.org/
+RUN npm config set registry http://registry.npmjs.org/ \
 	&& npm install \
     && npm install -g serve \
     && npm run build \
