@@ -12,12 +12,7 @@ COPY ./src ./src
 COPY ./public ./public
 
 # Install node packages, install serve, build the app, and remove dependencies at the end
-RUN npm config rm proxy \
-    && npm config rm https-proxy \
-	&& npm install \
-    && npm install -g serve \
-    && npm run build \
-    && rm -fr node_modules
+RUN npm install -g
 
 EXPOSE 3000
 
