@@ -12,7 +12,9 @@ COPY ./src ./src
 COPY ./public ./public
 
 # Install node packages, install serve, build the app, and remove dependencies at the end
-RUN npm install -g
+RUN npm install -g \
+    && npm install -g serve \
+	&& npm run build
 
 EXPOSE 3000
 
