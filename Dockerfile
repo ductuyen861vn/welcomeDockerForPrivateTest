@@ -5,7 +5,7 @@ FROM --platform=linux/amd64 node:18-alpine
 WORKDIR /app
 
 # Copy the app package and package-lock.json file
-COPY package*.json ./
+COPY package.json ./
 
 # Copy local directories to the current local directory of our docker image (/app)
 COPY ./src ./src
