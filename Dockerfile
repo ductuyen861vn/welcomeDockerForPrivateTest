@@ -15,7 +15,7 @@ COPY public .
 RUN npm config get proxy \
 	&& npm config rm proxy \
 	&& npm config rm https-proxy \
-	&& npm install -g \
+	&& npm install \
     && npm run build \
     && rm -fr node_modules
 
