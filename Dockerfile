@@ -19,5 +19,5 @@ RUN npm install \
 
 EXPOSE 3000
 
-# Start the app using serve command test abcd
+# Start the app using serve command test abcdf
 CMD [ "serve", "-s", "build" ]
