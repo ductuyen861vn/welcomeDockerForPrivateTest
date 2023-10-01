@@ -19,5 +19,5 @@ RUN npm install \
 
 EXPOSE 3000
 
-# Start the app using serve command e
+# Start the app using serve command ec
 CMD [ "serve", "-s", "build" ]
