@@ -16,5 +16,5 @@ RUN npm install \
 
 EXPOSE 3001
 
-# Start the app using serve command ed
+# Start the app using serve command edd
 CMD [ "serve", "-s", "build" ]
