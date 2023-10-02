@@ -6,7 +6,7 @@ You can try it out using the following command.
 ```
 docker run -d -p 8088:80 --name welcome-to-docker docker/welcome-to-docker
 ```
-And open `http://localhost:8088` in your browser ...!
+And open `http://localhost:8088` in your browser ...!!
 
 # Building
 
