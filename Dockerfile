@@ -17,4 +17,5 @@ RUN npm install \
 EXPOSE 3001
 
 # Start the app using serve command acef
+
 CMD [ "serve", "-s", "build" ]
