@@ -16,6 +16,6 @@ RUN npm install \
 
 EXPOSE 3001
 
-# Start the app using serve command test
+# Start the app using serve command test eee
 
 CMD [ "serve", "-s", "build" ]
